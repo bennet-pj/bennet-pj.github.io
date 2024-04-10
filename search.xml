@@ -2,8 +2,38 @@
 <search> 
   
   
+    
+    <entry>
+      <title>前端第一次作业</title>
+      <link href="/2024/04/10/%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/"/>
+      <url>/2024/04/10/%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/</url>
+      
+        <content type="html"><![CDATA[<script>    //三角形    for (let i = 1; i <= 5; i++) {        document.write("&nbsp".repeat(5 - i) + "&nbsp *".repeat(i) + "<br>")    }    document.write("<br>219970523彭景<br><br>")  //219970523彭景    //平行四边形    for (let i = 1; i <= 5; i++) {        document.write("&nbsp".repeat(5 - i) + "&nbsp *".repeat(5) + "<br>")    }    document.write("<br>219970523彭景<br><br>")    //菱形    for (let i = 1; i <= 3; i++) {        document.write("&nbsp&nbsp;".repeat(3 - i) + "&nbsp;*".repeat(i * 2 - 1) + "<br>");    }    for (let i = 2; i >= 1; i--) {        document.write("&nbsp&nbsp;".repeat(3 - i) + "&nbsp;*".repeat(i * 2 - 1) + "<br>");    }</script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 使用JavaScript程序打印图形 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
     
     
     <entry>
@@ -29,9 +59,9 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -43,17 +73,6 @@
       <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
