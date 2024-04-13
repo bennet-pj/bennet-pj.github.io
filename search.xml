@@ -8,7 +8,7 @@
       <link href="/2024/04/10/%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/"/>
       <url>/2024/04/10/%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/</url>
       
-        <content type="html"><![CDATA[<pre><code>//三角形for (let i = 1; i &lt;= 5; i++) &#123;    document.write(&quot;&amp;nbsp&quot;.repeat(5 - i) + &quot;&amp;nbsp *&quot;.repeat(i) + &quot;&lt;br&gt;&quot;)&#125;document.write(&quot;&lt;br&gt;219970523彭景&lt;br&gt;&lt;br&gt;&quot;)  //219970523彭景//平行四边形for (let i = 1; i &lt;= 5; i++) &#123;    document.write(&quot;&amp;nbsp&quot;.repeat(5 - i) + &quot;&amp;nbsp *&quot;.repeat(5) + &quot;&lt;br&gt;&quot;)&#125;document.write(&quot;&lt;br&gt;219970523彭景&lt;br&gt;&lt;br&gt;&quot;)//菱形for (let i = 1; i &lt;= 3; i++) &#123;    document.write(&quot;&amp;nbsp&amp;nbsp;&quot;.repeat(3 - i) + &quot;&amp;nbsp;*&quot;.repeat(i * 2 - 1) + &quot;&lt;br&gt;&quot;);&#125;for (let i = 2; i &gt;= 1; i--) &#123;    document.write(&quot;&amp;nbsp&amp;nbsp;&quot;.repeat(3 - i) + &quot;&amp;nbsp;*&quot;.repeat(i * 2 - 1) + &quot;&lt;br&gt;&quot;);&#125;</code></pre><hr><img src="/img/homework01.png">]]></content>
+        <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//三角形</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;&amp;nbsp&quot;</span>.<span class="title function_">repeat</span>(<span class="number">5</span> - i) + <span class="string">&quot;&amp;nbsp *&quot;</span>.<span class="title function_">repeat</span>(i) + <span class="string">&quot;&lt;br&gt;&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;&lt;br&gt;219970523彭景&lt;br&gt;&lt;br&gt;&quot;</span>)  <span class="comment">//219970523彭景</span></span><br><span class="line"><span class="comment">//平行四边形</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;&amp;nbsp&quot;</span>.<span class="title function_">repeat</span>(<span class="number">5</span> - i) + <span class="string">&quot;&amp;nbsp *&quot;</span>.<span class="title function_">repeat</span>(<span class="number">5</span>) + <span class="string">&quot;&lt;br&gt;&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;&lt;br&gt;219970523彭景&lt;br&gt;&lt;br&gt;&quot;</span>)</span><br><span class="line"><span class="comment">//菱形</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= <span class="number">3</span>; i++) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;&amp;nbsp&amp;nbsp;&quot;</span>.<span class="title function_">repeat</span>(<span class="number">3</span> - i) + <span class="string">&quot;&amp;nbsp;*&quot;</span>.<span class="title function_">repeat</span>(i * <span class="number">2</span> - <span class="number">1</span>) + <span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">2</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;&amp;nbsp&amp;nbsp;&quot;</span>.<span class="title function_">repeat</span>(<span class="number">3</span> - i) + <span class="string">&quot;&amp;nbsp;*&quot;</span>.<span class="title function_">repeat</span>(i * <span class="number">2</span> - <span class="number">1</span>) + <span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><script>//三角形for (let i = 1; i <= 5; i++) {document.write("&nbsp".repeat(5 - i) + "&nbsp *".repeat(i) + "<br>")}document.write("<br>219970523彭景<br><br>")  //219970523彭景//平行四边形for (let i = 1; i <= 5; i++) {document.write("&nbsp".repeat(5 - i) + "&nbsp *".repeat(5) + "<br>")}document.write("<br>219970523彭景<br><br>")//菱形for (let i = 1; i <= 3; i++) {document.write("&nbsp&nbsp;".repeat(3 - i) + "&nbsp;*".repeat(i * 2 - 1) + "<br>");}for (let i = 2; i >= 1; i--) {document.write("&nbsp&nbsp;".repeat(3 - i) + "&nbsp;*".repeat(i * 2 - 1) + "<br>");}</script>]]></content>
       
       
       
@@ -37,9 +37,9 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -59,9 +59,9 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -81,9 +81,9 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -92,9 +92,9 @@
     
     
     <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
