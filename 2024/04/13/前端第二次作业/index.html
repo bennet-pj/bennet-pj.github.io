@@ -1,0 +1,413 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>前端第二次作业 | Bengin-Blog</title><meta name="author" content="Bengin"><meta name="copyright" content="Bengin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293&#x2F;&#x2F;菜单收缩与扩展function show(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端第二次作业">
+<meta property="og:url" content="http://bennet-pj.github.io/2024/04/13/%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A/index.html">
+<meta property="og:site_name" content="Bengin-Blog">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293&#x2F;&#x2F;菜单收缩与扩展function show(">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://bennet-pj.github.io/img/v2-7f8af9c4618484551126cea6eb06fd3e_r.jpg">
+<meta property="article:published_time" content="2024-04-13T06:27:00.000Z">
+<meta property="article:modified_time" content="2024-04-15T13:10:27.085Z">
+<meta property="article:author" content="Bengin">
+<meta property="article:tag" content="使用DOM操纵图片">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://bennet-pj.github.io/img/v2-7f8af9c4618484551126cea6eb06fd3e_r.jpg"><link rel="shortcut icon" href="/img/a7a69f28e7b44b258fe554facc2b1eb9.jpg"><link rel="canonical" href="http://bennet-pj.github.io/2024/04/13/%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '前端第二次作业',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-04-15 21:10:27'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://www.fomal.cc/static/css/runtime.min.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.1.1"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/a7a69f28e7b44b258fe554facc2b1eb9.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/v2-7f8af9c4618484551126cea6eb06fd3e_r.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Bengin-Blog"><span class="site-name">Bengin-Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">前端第二次作业</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-04-13T06:27:00.000Z" title="发表于 2024-04-13 14:27:00">2024-04-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-04-15T13:10:27.085Z" title="更新于 2024-04-15 21:10:27">2024-04-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="前端第二次作业"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//菜单收缩与扩展</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">show</span>(<span class="params">title</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> currentMenu = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(title);</span><br><span class="line">    <span class="comment">//获取所有菜单项</span></span><br><span class="line">    <span class="keyword">let</span> allMenud = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;ul[id^=menu]&#x27;</span>);</span><br><span class="line">    <span class="comment">//关闭其他菜单项</span></span><br><span class="line">    allMenud.<span class="title function_">forEach</span>(<span class="keyword">function</span> (<span class="params">menu</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (menu.<span class="property">id</span> != title) &#123;</span><br><span class="line">            menu.<span class="property">style</span>.<span class="property">display</span> = <span class="string">&quot;none&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">let</span> currentStatus = currentMenu.<span class="property">style</span>.<span class="property">display</span>;</span><br><span class="line">    currentMenu.<span class="property">style</span>.<span class="property">display</span> = currentStatus == <span class="string">&quot;&quot;</span> ? <span class="string">&quot;none&quot;</span> : <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取原始图片路径</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">showImg</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//219970523彭景</span></span><br><span class="line">    <span class="comment">//获取原始图片</span></span><br><span class="line">    <span class="keyword">let</span> oriImg = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;fruit&#x27;</span>);</span><br><span class="line">    <span class="comment">//获取原始图片路径</span></span><br><span class="line">    <span class="keyword">let</span> imgSrc = oriImg.<span class="property">src</span>;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;msg1&#x27;</span>).<span class="property">textContent</span> = imgSrc;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取喜欢的水果</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getFruit</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//获取所有name为enjoy的复选框元素</span></span><br><span class="line">    <span class="keyword">let</span> select = <span class="variable language_">document</span>.<span class="title function_">getElementsByName</span>(<span class="string">&#x27;enjoy&#x27;</span>);</span><br><span class="line">    <span class="keyword">let</span> selectedFruits = [];</span><br><span class="line">    <span class="comment">//遍历复选框</span></span><br><span class="line">    select.<span class="title function_">forEach</span>(<span class="keyword">function</span> (<span class="params">sl</span>) &#123;</span><br><span class="line">        <span class="comment">//如果复选框被选中，就将对应的水果添加到数组中</span></span><br><span class="line">        <span class="keyword">if</span> (sl.<span class="property">checked</span>) &#123;</span><br><span class="line">            selectedFruits.<span class="title function_">push</span>(sl.<span class="property">value</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">//在id为msg2的盒子中显示选中的水果</span></span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;msg2&#x27;</span>).<span class="property">textContent</span> = selectedFruits</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//创建图片</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">createImg</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//创建一个新的图片元素</span></span><br><span class="line">    <span class="keyword">let</span> newImg = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;img&#x27;</span>);</span><br><span class="line">    <span class="comment">//设置新图片的属性</span></span><br><span class="line">    newImg.<span class="property">src</span> = <span class="string">&quot;img/grape.jpg&quot;</span>; <span class="comment">// 设置图片路径</span></span><br><span class="line">    <span class="comment">//将新图片添加到id为msg3的盒子中</span></span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;msg3&#x27;</span>).<span class="title function_">appendChild</span>(newImg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//克隆图片</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">cloneImg</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//获取原始图片</span></span><br><span class="line">    <span class="keyword">let</span> originalImg = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;fruit&#x27;</span>);</span><br><span class="line">    <span class="comment">//克隆原始图片</span></span><br><span class="line">    <span class="keyword">let</span> cloneImg = originalImg.<span class="title function_">cloneNode</span>(<span class="literal">true</span>);</span><br><span class="line">    <span class="comment">//将克隆图片在id为msg4的盒子中显示</span></span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;msg4&#x27;</span>).<span class="title function_">appendChild</span>(cloneImg)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//改变图片</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">changeImg</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//获取原始图片</span></span><br><span class="line">    <span class="keyword">let</span> originalImg = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;fruit&#x27;</span>);</span><br><span class="line">    <span class="comment">//修改图片路径</span></span><br><span class="line">    originalImg.<span class="property">src</span> = <span class="string">&#x27;img/grape.jpg&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除图片</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">removeImg</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//获取原始图片</span></span><br><span class="line">    <span class="keyword">let</span> originalImg = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;fruit&#x27;</span>);</span><br><span class="line">    <span class="comment">//删除原始图片</span></span><br><span class="line">    originalImg.<span class="property">parentNode</span>.<span class="title function_">removeChild</span>(originalImg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//操作样式1</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">changeCss1</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> originalImg = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;fruit&#x27;</span>);</span><br><span class="line">    originalImg.<span class="property">style</span>.<span class="property">border</span> = <span class="string">&#x27;5px solid blue&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//操作样式2</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">changeCss2</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//获取所有fieldset元素</span></span><br><span class="line">    <span class="keyword">let</span> fieldsets = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;fieldset&#x27;</span>)</span><br><span class="line">    <span class="comment">//遍历，并添加内部样式</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; fieldsets.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        fieldsets[i].<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;red&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+
+<style type="text/css">
+        html, div, ul, li {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        li {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        fieldset {
+            border: #000 1px dashed;
+            width: 225px;
+            height: 225px;
+            padding: 10px;
+            text-align: center;
+            float: left;
+            margin-left: 5px;
+        }
+
+        #cont_left {
+            width: 300px;
+            height: 500px;
+            float: left;
+        }
+
+        #cont_right {
+            float: left;
+        }
+
+        .newcss1 {
+            background-color: yellowgreen;
+        }
+    </style>
+<body>
+<div style="height: 700px">
+<div id="cont_left">
+    <ul><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="img/fold.gif"><a onclick="show('menu1')"> 通过DOM获取信息 </a>
+        <ul id="menu1">
+            <li onclick="showImg()"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="img/doc.gif">获取原始图片路径</li>
+            <li onclick="getFruit()"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="img/doc.gif">获取我喜欢的水果</li>
+        </ul>
+    </ul>
+    <ul><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="img/fold.gif"><a onclick="show('menu2')"> 通过DOM操作元素 </a>
+        <ul id="menu2">
+            <li onclick="createImg()"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="img/doc.gif">创建图片</li>
+            <li onclick="cloneImg()"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="img/doc.gif">克隆图片</li>
+            <li onclick="changeImg()"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="img/doc.gif">改变图片</li>
+            <li onclick="removeImg()"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="img/doc.gif">删除图片</li>
+        </ul>
+    </ul>
+    <ul><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="img/fold.gif"><a onclick="show('menu3')"> 通过DOM操作样式 </a>
+        <ul id="menu3">
+            <li onclick="changeCss1()"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="img/doc.gif">为原始图片加上行间样式</li>
+            <li onclick="changeCss2()"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="img/doc.gif">为所有的fieldset加上内部样式</li>
+        </ul>
+    </ul>
+</div>
+<fieldset>
+    <legend>原始图片</legend>
+    <img id="fruit" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="img/fruit.jpg">
+</fieldset>
+<fieldset>
+    <legend>图片路径</legend>
+    <p id="msg1">在这里显示</p>
+</fieldset>
+<fieldset>
+    <legend>选择你喜欢的水果</legend>
+    <ul style="text-align: left;">
+        <li>
+            <input name="enjoy" type="checkbox" value="苹果"/>苹果
+        </li>
+        <li>
+            <input name="enjoy" type="checkbox" value="香蕉" checked="checked"/>香蕉
+        </li>
+        <li>
+            <input name="enjoy" type="checkbox" value="葡萄"/>葡萄
+        </li>
+        <li>
+            <input name="enjoy" type="checkbox" value="梨" checked="checked"/>梨
+        </li>
+        <li>
+            <input name="enjoy" type="checkbox" value="西瓜"/>西瓜
+        </li>
+    </ul>
+    <div id="msg2" style="margin-top: 10px;text-align: left;"></div>
+</fieldset>
+<fieldset>
+    <legend>创建图片</legend>
+    <div id="msg3"></div>
+</fieldset>
+<fieldset>
+    <legend>克隆图片</legend>
+    <div id="msg4"></div>
+</fieldset>
+</div>
+
+<script>
+    //菜单收缩与扩展
+    function show(title) {
+        let currentMenu = document.getElementById(title);
+        //获取所有菜单项
+        let allMenud = document.querySelectorAll('ul[id^=menu]');
+        //关闭其他菜单项
+        allMenud.forEach(function (menu) {
+            if (menu.id != title) {
+                menu.style.display = "none";
+            }
+        });
+        let currentStatus = currentMenu.style.display;
+        currentMenu.style.display = currentStatus == "" ? "none" : "";
+    }
+    //获取原始图片路径
+    function showImg() {
+        //219970523彭景
+        //获取原始图片
+        let oriImg = document.getElementById('fruit');
+        //获取原始图片路径
+        let imgSrc = oriImg.src;
+        document.getElementById('msg1').textContent = imgSrc;
+    }
+    //获取喜欢的水果
+    function getFruit() {
+        //获取所有name为enjoy的复选框元素
+        let select = document.getElementsByName('enjoy');
+        let selectedFruits = [];
+        //遍历复选框
+        select.forEach(function (sl) {
+            //如果复选框被选中，就将对应的水果添加到数组中
+            if (sl.checked) {
+                selectedFruits.push(sl.value);
+            }
+        });
+        //在id为msg2的盒子中显示选中的水果
+        document.getElementById('msg2').textContent = selectedFruits
+    }
+    //创建图片
+    function createImg() {
+        //创建一个新的图片元素
+        let newImg = document.createElement('img');
+        //设置新图片的属性
+        newImg.src = "img/grape.jpg"; // 设置图片路径
+        //将新图片添加到id为msg3的盒子中
+        document.getElementById('msg3').appendChild(newImg);
+    }
+    //克隆图片
+    function cloneImg() {
+        //获取原始图片
+        let originalImg = document.getElementById('fruit');
+        //克隆原始图片
+        let cloneImg = originalImg.cloneNode(true);
+        //将克隆图片在id为msg4的盒子中显示
+        document.getElementById('msg4').appendChild(cloneImg)
+    }
+    //改变图片
+    function changeImg() {
+        //获取原始图片
+        let originalImg = document.getElementById('fruit');
+        //修改图片路径
+        originalImg.src = 'img/grape.jpg';
+    }
+    //删除图片
+    function removeImg() {
+        //获取原始图片
+        let originalImg = document.getElementById('fruit');
+        //删除原始图片
+        originalImg.parentNode.removeChild(originalImg);
+    }
+    //操作样式1
+    function changeCss1() {
+        let originalImg = document.getElementById('fruit');
+        originalImg.style.border = '5px solid blue'
+    }
+    //操作样式2
+    function changeCss2() {
+        //获取所有fieldset元素
+        let fieldsets = document.getElementsByTagName('fieldset')
+        //遍历，并添加内部样式
+        for (let i = 0; i < fieldsets.length; i++) {
+            fieldsets[i].style.backgroundColor = 'red'
+        }
+    }
+</script>
+<!-- hexo injector body_end start --><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '1s');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v6.2.0" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="主题版本Butterfly_v4.3.1" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" data-title="本站采用多线部署，主线路托管于Vercel" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://dashboard.4everland.org/" style="margin-inline:5px" data-title="本站采用多线部署，备用线路托管于4EVERLAND" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-4EVERLAND-22DDDD?style=flat&amp;logo=IPFS" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="https://www.fomal.cc/static/js/runtime.js"></script><!-- hexo injector body_end end --></body>
+
+
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://bennet-pj.github.io">Bengin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://bennet-pj.github.io/2024/04/13/%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A/">http://bennet-pj.github.io/2024/04/13/%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://bennet-pj.github.io" target="_blank">Bengin-Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BD%BF%E7%94%A8DOM%E6%93%8D%E7%BA%B5%E5%9B%BE%E7%89%87/">使用DOM操纵图片</a></div><div class="post_share"><div class="social-share" data-image="/img/v2-7f8af9c4618484551126cea6eb06fd3e_r.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/04/10/homework01-2024-04-10-%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/" title="前端第一次作业"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/v2-7f8af9c4618484551126cea6eb06fd3e_r.jpg" onerror="onerror=null;src='/img/v2-7f8af9c4618484551126cea6eb06fd3e_r.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">前端第一次作业</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/a7a69f28e7b44b258fe554facc2b1eb9.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Bengin</div><div class="author-info__description">演示博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/bennet-pj"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/bennet-pj" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:3288409778@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By Bengin</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="30" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body></html>
