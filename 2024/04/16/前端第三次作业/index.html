@@ -1,0 +1,64 @@
+
+    <style type="text/css">
+        input {
+            font-size: 26px;
+            margin-top: 20px;
+        }
+        body {
+            background-image: url(img/grassland.png);
+            background-size: contain;
+        }
+        #mytank {
+            position: relative;
+            left: 10px;
+            top: 100px
+        }
+    </style>
+<body>
+<div style="height: 500px;width: 800px">
+<img id="mytank" src="img/right.png"/>
+<script>
+    let tank = document.getElementById('mytank');
+    //坦克开始位置
+    let tankLeft = 10;
+    let tankTop = 100;
+    //禁用鼠标右键
+    document.oncontextmenu = new Function("event.returnValue=false");
+    //监听事件
+    document.addEventListener('keydown', function (event) {
+        const key = event.key;
+        //获取坦克和屏幕的宽度和高度
+        let tankWidth = tank.clientWidth;
+        let tankHeight = tank.clientHeight;
+        let screenWidth = window.innerWidth;
+        let screenHeight = window.innerHeight;
+        //根据按键改变位置
+        if (key === 'w' || key === 'W') {
+            tank.src = 'img/up.png';
+            //检查是否超出屏幕范围
+            if (tankTop - 10 >= 0) {
+                tankTop -= 10;
+            }
+        } else if (key === 's' || key === 'S') {
+            tank.src = 'img/down.png';
+            if (tankTop + tankHeight + 10 <= screenHeight) {
+                tankTop += 10;
+            }
+        } else if (key === 'a' || key === 'A') {
+            tank.src = 'img/left.png';
+            if (tankLeft - 10 >= 0) {
+                tankLeft -= 10;
+            }
+        } else if (key === 'd' || key === 'D') {
+            tank.src = 'img/right.png';
+            if (tankLeft + tankWidth + 10 <= screenWidth) {
+                tankLeft += 10;
+            }
+        }
+        //更新坦克位置
+        tank.style.left = tankLeft + 'px';
+        tank.style.top = tankTop + 'px';
+    });
+</script>
+</div>
+</body>
