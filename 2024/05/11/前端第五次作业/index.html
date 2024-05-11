@@ -1,0 +1,38 @@
+
+    <style>
+        #player1 {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 150px;
+            height: 150px;
+            background-image: url('img/player1.gif');
+            background-size: cover;
+        }
+    </style>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        document.oncontextmenu = new Function("event.returnValue=false");//禁用鼠标右键
+        $(document).ready(function () {
+            var isPlayer1 = true; // 标记当前角色状态，默认为 player1
+            $('#player1').dblclick(function () {
+                if (isPlayer1) {
+                    $(this).css('background-image', 'url("img/player1_big.gif")'); //双击后更换图像
+                } else {
+                    $(this).css('background-image', 'url("img/player1.gif")'); //双击后恢复原始图像
+                }
+                isPlayer1 = !isPlayer1; // 切换角色状态
+            });
+            //219970523彭景
+            $(document).mousedown(function (e) {
+                var player = $('#player1');
+                var mouseX = e.pageX - player.width() / 2; // 鼠标点击的x坐标
+                var mouseY = e.pageY - player.height() / 2; // 鼠标点击的y坐标
+                player.stop().animate({top: mouseY, left: mouseX}, 500); // 使用动画移动角色到鼠标点击位置
+            });
+        });
+    </script>
+<body bgcolor="black">
+<div id="player1"></div>
+</body>
+
