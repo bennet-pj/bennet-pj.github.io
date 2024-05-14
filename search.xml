@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>前端第六次作业</title>
+      <link href="/2024/05/14/%E5%89%8D%E7%AB%AF%E7%AC%AC%E5%85%AD%E6%AC%A1%E4%BD%9C%E4%B8%9A/"/>
+      <url>/2024/05/14/%E5%89%8D%E7%AB%AF%E7%AC%AC%E5%85%AD%E6%AC%A1%E4%BD%9C%E4%B8%9A/</url>
+      
+        <content type="html"><![CDATA[    <meta charset="UTF-8">    <script src="js/jquery-3.1.1.min.js"></script>    <script src="js/jquery.color.js"></script><body><button id="btn1">颜色插件测试</button><div class="div1">    hello</div><script>    //219970523彭景    $(function () {        $("#btn1").click(function () {            $(".div1")                .animate({backgroundColor: "#00ff00"},5000)                .animate({backgroundColor: "#ff0000"},5000)        });    })</script></body>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 选择一个jQuery插件制作一个demo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前端第五次作业</title>
       <link href="/2024/05/11/%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/"/>
       <url>/2024/05/11/%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%BA%94%E6%AC%A1%E4%BD%9C%E4%B8%9A/</url>
@@ -121,9 +140,9 @@
     
     
     <entry>
-      <title>留言板</title>
-      <link href="/comments/index.html"/>
-      <url>/comments/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -132,9 +151,9 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>留言板</title>
+      <link href="/comments/index.html"/>
+      <url>/comments/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       

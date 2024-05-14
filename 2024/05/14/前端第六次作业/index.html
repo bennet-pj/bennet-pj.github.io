@@ -1,0 +1,20 @@
+
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.color.js"></script>
+<body>
+<button id="btn1">颜色插件测试</button>
+<div class="div1">
+    hello
+</div>
+<script>
+    //219970523彭景
+    $(function () {
+        $("#btn1").click(function () {
+            $(".div1")
+                .animate({backgroundColor: "#00ff00"},5000)
+                .animate({backgroundColor: "#ff0000"},5000)
+        });
+    })
+</script>
+</body>
