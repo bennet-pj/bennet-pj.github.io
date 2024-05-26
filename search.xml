@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>前端第五次实验</title>
+      <link href="/2024/05/26/%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%BA%94%E6%AC%A1%E5%AE%9E%E9%AA%8C/"/>
+      <url>/2024/05/26/%E5%89%8D%E7%AB%AF%E7%AC%AC%E4%BA%94%E6%AC%A1%E5%AE%9E%E9%AA%8C/</url>
+      
+        <content type="html"><![CDATA[    <meta charset="UTF-8">    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>    <link rel="stylesheet" type="text/css" href="css/style.css"><body><div class="container">    <form class="form" id="registrationForm">        <div class="title">注册</div>        <input id="username" class="input" name="username" placeholder="用户名" type="text" required>        <input id="email" class="input" name="email" placeholder="邮箱" type="email" required>        <input id="phone" class="input" name="phone" placeholder="电话" type="tel" required>        <input id="password" class="input" name="password" placeholder="密码" type="password" required>        <input id="repassword" class="input" name="repassword" placeholder="确认密码" type="password" required>        <div id="message"></div>        <button class="button-confirm">注册 →</button>    </form></div><script>    $(document).ready(function () {        $('#registrationForm').on('submit', function (event) {            event.preventDefault();            let username = $('#username').val();            let email = $('#email').val();            let phone = $('#phone').val();            let password = $('#password').val();            let repassword=$('#repassword').val();            //设置密码和电话格式            let phonePattern = /^1[3-9]\d{9}$/; // 手机号码正则表达式            var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/; // 至少8位且包含大小写字母的正则表达式            //判断电话号码            if (!phonePattern.test(phone)) {                $('#message').css('color', 'red').html('请输入有效的国内电话号码。');                return;            }            //判断密码            if (!passwordPattern.test(password)) {                $('#message').css('color', 'red').html('密码至少8位，且包含大小写字母。');                return;            }            //确认密码            if (password !== repassword) {                $('#message').css('color', 'red').html('两次密码输入不一致。');                return;            }            // 模拟注册成功            $('#message').css('color', 'green').html('注册成功');        });    });</script></body>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 用户注册验证的设计与实现 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前端第六次作业</title>
       <link href="/2024/05/14/%E5%89%8D%E7%AB%AF%E7%AC%AC%E5%85%AD%E6%AC%A1%E4%BD%9C%E4%B8%9A/"/>
       <url>/2024/05/14/%E5%89%8D%E7%AB%AF%E7%AC%AC%E5%85%AD%E6%AC%A1%E4%BD%9C%E4%B8%9A/</url>
@@ -140,17 +159,6 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>留言板</title>
       <link href="/comments/index.html"/>
       <url>/comments/index.html</url>
@@ -162,11 +170,11 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 翻页按钮居中 */#pagination {    width: 100%;    margin: auto;}]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -176,17 +184,6 @@
       <title>友链</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -206,9 +203,31 @@
     
     
     <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 翻页按钮居中 */#pagination {    width: 100%;    margin: auto;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>音乐</title>
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
